@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Read noise calculation documentation &#8212; Readout noise measurement 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Settings documentation" href="code_settings.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="code_settings.html" title="Settings documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Readout noise measurement 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Read noise calculation  documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-Readout_Noise">
+<span id="read-noise-calculation-documentation"></span><h1>Read noise calculation  documentation<a class="headerlink" href="#module-Readout_Noise" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.find_bias">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">find_bias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">light_ptc_pat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptc_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.find_bias" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>light_ptc_pat</strong> (<em>str</em>) – path to the light ptc images</p></li>
+<li><p><strong>ptc_struct</strong> (<em>str</em>) – image file structure</p></li>
+<li><p><strong>gain</strong> (<em>str</em>) – low or high gain</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>mean bias values and std in bias</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.find_readout_noise">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">find_readout_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">light_ptc_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptc_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.find_readout_noise" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>light_ptc_path</strong> (<em>str</em>) – path to light ptc images</p></li>
+<li><p><strong>ptc_struct</strong> (<em>str</em>) – image file structure</p></li>
+<li><p><strong>gain</strong> (<em>str</em>) – high or low gain</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>readout noise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.get_bias_images">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">get_bias_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">light_ptc_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptc_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.get_bias_images" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>light_ptc_path</strong> (<em>str</em>) – path to light ptc images</p></li>
+<li><p><strong>ptc_struct</strong> (<em>stry</em>) – file name structure</p></li>
+<li><p><strong>gain</strong> (<em>str</em>) – high or low gain</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>bias image numpy array</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.get_image">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.get_image" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img_path</strong> (<em>str</em>) – path to the image.</p></li>
+<li><p><strong>gain</strong> (<em>str</em>) – high or low gain</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Image numpy array</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.get_rastor_rn">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">get_rastor_rn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">light_ptc_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptc_struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.get_rastor_rn" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>light_ptc_path</strong> (<em>str</em>) – Light ptc path</p></li>
+<li><p><strong>ptc_struct</strong> (<em>str</em>) – Image file structure</p></li>
+<li><p><strong>gain</strong> (<em>str</em>) – high or low gain</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – raster scan size n x n</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>raster scanned readout noise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.plot_histogram">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">plot_histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rslt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.plot_histogram" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy array.</em>) – image array.</p></li>
+<li><p><strong>path</strong> (<em>str.</em>) – path to code.</p></li>
+<li><p><strong>rslt_path</strong> (<em>path to the result images.</em>) – path.</p></li>
+<li><p><strong>gain</strong> (<em>str.</em>) – high or low gain.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.rms_std">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">rms_std</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.rms_std" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>img</strong> (<em>numpy array</em>) – image array</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>rms value, std, median value, pixels &gt; 5RN, pixels &gt; 8RN.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.save_image">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">save_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.save_image" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy array</em>) – image array</p></li>
+<li><p><strong>path_name</strong> (<em>str</em>) – path where image to be saved.</p></li>
+<li><p><strong>img_title</strong> (<em>str</em>) – title of the image</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Readout_Noise.write_csvfile">
+<span class="sig-prename descclassname"><span class="pre">Readout_Noise.</span></span><span class="sig-name descname"><span class="pre">write_csvfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Readout_Noise.write_csvfile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of the csv file.</p></li>
+<li><p><strong>list_name</strong> (<em>list</em>) – list of parameters to be included in csv file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="code_settings.html"
+                          title="previous chapter">Settings documentation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/code.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="code_settings.html" title="Settings documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Readout noise measurement 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Read noise calculation  documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Nirmal Kaipachery.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

@@ -377,15 +377,15 @@ def plot_RN_raster(path, light_ptc_path, ptc_struct, gain):
     # plt.show()
 
 
-rootdir = './data/'
-for file in os.listdir(rootdir):
-    d = os.path.join(rootdir, file)
-    if os.path.isdir(d):
-        d.replace('\\', '/')
-        path, result_path, ptc_campaign, ptc_struct, light_ptc_path = generate_int_ptc_paths(d)
-        print(path)
-        plot_RN_raster(path, light_ptc_path, ptc_struct, "low")
-        plot_RN_raster(path, light_ptc_path, ptc_struct, "high")
+# rootdir = './data/'
+# for file in os.listdir(rootdir):
+#     d = os.path.join(rootdir, file)
+#     if os.path.isdir(d):
+#         d.replace('\\', '/')
+#         path, result_path, ptc_campaign, ptc_struct, light_ptc_path = generate_int_ptc_paths(d)
+#         print(path)
+#         plot_RN_raster(path, light_ptc_path, ptc_struct, "low")
+#         plot_RN_raster(path, light_ptc_path, ptc_struct, "high")
 
 
 

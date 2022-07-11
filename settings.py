@@ -3,6 +3,16 @@ import json
 
 
 def create_rslt_directory(path):
+    """
+
+    :param path: Main path
+
+    :type path: str
+
+    :return: path to the result directory
+
+    :rtype: str
+    """
     rlt_path = path + "/Results"
     if os.path.exists(rlt_path):
         print("folder exists")
@@ -65,6 +75,16 @@ def logfile_to_json(path):
 
 
 def file_struct_name(path, campaign):
+    """
+
+    :param path:  Main path
+    :type path: str
+    :param campaign: Name of the campaign Int_PTC, exp_PTC etc
+    :type campaign: str
+    :return: file structure name
+    :rtype: str
+
+    """
     path_parts = path.split("/")
     struct_name = (
         path_parts[-1].replace("LOT", "/Ultrasat_BSI_L") + "_" + campaign + "_#"
@@ -73,6 +93,13 @@ def file_struct_name(path, campaign):
 
 
 def generate_int_ptc_paths(path):
+    """
+
+    :param path: Main path
+    :type path: str
+    :return: path, path to result directory, PTC campaign name, PTC structure name, light PTC path.
+    :rtype:
+    """
     result_path = create_rslt_directory(path)
     ptc_campaign = "PTC_int_hr"
     ptc_struct = file_struct_name(path, ptc_campaign)

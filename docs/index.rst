@@ -10,6 +10,9 @@ Welcome to Readout noise measurement's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   summary
+   code_settings
+   code
 
 
 Indices and tables
